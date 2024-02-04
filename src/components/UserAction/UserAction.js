@@ -1,18 +1,20 @@
 import { StyleSheet, View, Pressable, TextInput, Text } from "react-native";
 import { useFonts } from "expo-font";
 import { useState } from "react";
-const UserAction = () => {
+const UserAction = ({setName}) => {
   const [fontLoaded] = useFonts({
     KumbhSans: require("../../../assets/fonts/KumbhSans-VariableFont_YOPQ,wght.ttf"),
   });
   const [value, setValue] = useState("");
+
+
 
   const onChangeHandler = (e) => {
     setValue(e);
   };
 
   const onSubmit = _ => {
-    console.log(value);
+    setName(value);
   }
   if (!fontLoaded) {
     return <Text>Loading....</Text>;

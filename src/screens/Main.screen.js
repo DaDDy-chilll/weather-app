@@ -3,12 +3,15 @@ import Header from '../components/Header/Header'
 import WeatherData from '../components/WeatherData/WeatherData'
 import UserAction from '../components/UserAction/UserAction'
 
-export default Main = () => {
+export default Main = ({data,loading,setName}) => {
+   const {name,description} = data;
+
+    if(loading)  return <View>Loading...</View>
     return (
         <View style={styles.container}>
-            <Header name='landon' description='light intensity drizzle'/>
+            <Header name={name} description={description}/>
             <WeatherData />
-            <UserAction />
+            <UserAction setName={setName}/>
         </View>
     )
 }
