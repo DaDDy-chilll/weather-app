@@ -1,13 +1,13 @@
 import {StyleSheet,View,Text} from 'react-native'
 import {useFonts} from 'expo-font'
-const Header = ({name,description}) => {
+const Header = ({name,description,setloading}) => {
     const [fontsLoaded] = useFonts({
         "Koulen":require('../../../assets/fonts/Koulen-Regular.ttf'),
         "Jaldi":require('../../../assets/fonts/Jaldi-Regular.ttf')
     })
 
     if (!fontsLoaded) {
-        return <Text>Loading...</Text>;
+        setloading(true)
       }
     return (
         <View style={styles.textContainer}>
@@ -35,7 +35,9 @@ const styles = StyleSheet.create({
         fontWeight:"bold",
         fontSize:16,
         textTransform:'capitalize'
-    }
+    },
+   
+    
 
 })
 

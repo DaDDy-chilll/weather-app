@@ -4,7 +4,7 @@
     "slug": "weather-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icons/weather.svg",
+    "icon": "./assets/icons/cloud.png",
     "userInterfaceStyle": "light",
     "splash": {
 

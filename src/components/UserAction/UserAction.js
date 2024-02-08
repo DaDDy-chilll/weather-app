@@ -7,14 +7,13 @@ const UserAction = ({setName}) => {
   });
   const [value, setValue] = useState("");
 
-
-
   const onChangeHandler = (e) => {
     setValue(e);
   };
 
   const onSubmit = _ => {
     setName(value);
+    setValue('')
   }
   if (!fontLoaded) {
     return <Text>Loading....</Text>;
